@@ -12,7 +12,7 @@ class Grok(object):
     def __init__(self, pattern, predefined_patterns=DEFAULT_PATTERNS_DIRS, custom_patterns_dir=None, custom_patterns={}):
         self.pattern = pattern
         self.custom_patterns_dir = custom_patterns_dir
-        self.predefined_patterns = _reload_patterns(DEFAULT_PATTERNS_DIRS)
+        self.predefined_patterns = _reload_patterns(predefined_patterns)
 
         custom_pats = {}
         if custom_patterns_dir is not None:
