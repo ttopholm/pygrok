@@ -9,7 +9,7 @@ DEFAULT_PATTERNS_DIRS = [os.path.dirname(os.path.abspath(__file__)) + '/patterns
 
 
 class Grok(object):
-    def __init__(self, pattern, custom_patterns_dir=None, custom_patterns={}):
+    def __init__(self, pattern, predefined_patterns=DEFAULT_PATTERNS_DIRS, custom_patterns_dir=None, custom_patterns={}):
         self.pattern = pattern
         self.custom_patterns_dir = custom_patterns_dir
         self.predefined_patterns = _reload_patterns(DEFAULT_PATTERNS_DIRS)
